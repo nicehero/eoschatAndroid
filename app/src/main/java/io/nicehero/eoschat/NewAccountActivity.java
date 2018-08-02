@@ -16,13 +16,13 @@ public class NewAccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newaccount);
-        Button b = (Button)findViewById(R.id.submitButton);
+        Button b = findViewById(R.id.submitButton);
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText typePassword = (EditText)NewAccountActivity.this.findViewById(R.id.typePassword);
-                EditText typePassword2 = (EditText)NewAccountActivity.this.findViewById(R.id.typePassword2);
+                EditText typePassword = NewAccountActivity.this.findViewById(R.id.typePassword);
+                EditText typePassword2 = NewAccountActivity.this.findViewById(R.id.typePassword2);
                 if (!typePassword.getText().toString().equals(typePassword2.getText().toString())) {
                     AppUtils.showToast(
                             NewAccountActivity.this,
@@ -30,6 +30,7 @@ public class NewAccountActivity extends AppCompatActivity {
                             false);
                     return;
                 }
+                EditText typeAccountName = NewAccountActivity.this.findViewById(R.id.typeAccountName);
             }
         });
     }

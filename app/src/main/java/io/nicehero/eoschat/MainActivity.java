@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Picasso.with(MainActivity.this).setLoggingEnabled(true);
 
-        navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         imageLoader = new ImageLoader() {
             @Override
@@ -83,8 +83,8 @@ public class MainActivity extends AppCompatActivity
             }
         };
 
-        mDialogsList = (DialogsList) findViewById(R.id.dialogsList);
-        mSettingLayout = (LinearLayout) findViewById(R.id.settingLayout);
+        mDialogsList = findViewById(R.id.dialogsList);
+        mSettingLayout = findViewById(R.id.settingLayout);
         dialogsAdapter = new DialogsListAdapter<>(imageLoader);
 
         dialogsAdapter.setItems(DialogsFixtures.getDialogs());
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity
         mDialogsList.setBackgroundColor(Color.parseColor("#ffffff"));
         mDialogsList.setAdapter(dialogsAdapter);
 
-        Button setNotifyButton = (Button) findViewById(R.id.notifyButton);
+        Button setNotifyButton = findViewById(R.id.notifyButton);
         setNotifyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

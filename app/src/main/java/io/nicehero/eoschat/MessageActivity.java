@@ -58,10 +58,10 @@ public class MessageActivity extends AppCompatActivity
                 Picasso.with(MessageActivity.this).load(url).into(imageView);
             }
         };
-        this.messagesList = (MessagesList) findViewById(R.id.messagesList);
+        this.messagesList = findViewById(R.id.messagesList);
         initAdapter();
 
-        MessageInput input = (MessageInput) findViewById(R.id.input);
+        MessageInput input = findViewById(R.id.input);
         input.setInputListener(this);
         input.setTypingListener(this);
         input.setAttachmentsListener(this);
