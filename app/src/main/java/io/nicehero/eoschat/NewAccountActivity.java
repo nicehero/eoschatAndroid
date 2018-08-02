@@ -1,5 +1,6 @@
 package io.nicehero.eoschat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -15,8 +16,9 @@ public class NewAccountActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newaccount);
+        Button b = (Button)findViewById(R.id.submitButton);
 
-        ((Button)findViewById(R.id.submitButton)).setOnClickListener(new View.OnClickListener() {
+        b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 EditText typePassword = (EditText)NewAccountActivity.this.findViewById(R.id.typePassword);
@@ -34,6 +36,14 @@ public class NewAccountActivity extends AppCompatActivity {
 
     public void onBackPressed() {
         if (App.getMyAccount() == null) {
+            try {
+                Intent launcherIntent = new Intent(Intent.ACTION_MAIN);
+                launcherIntent.addCategory(Intent.CATEGORY_HOME);
+                startActivity(launcherIntent);
+            } catch (Throwable e) {
+                e.printStackTrace();
+            }
+
             return;
         }
         IntentWrapper.onBackPressed(this);
