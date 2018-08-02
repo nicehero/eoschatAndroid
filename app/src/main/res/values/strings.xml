@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">eoschat</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Friends</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_setting">Setting</string>
+    <string name="set_notify">open the background process authority</string>
+    <string name="hint_enter_a_message">type word</string>
+    <string name="copied_message">copied</string>
+    <string name="action_delete">delete</string>
+    <string name="action_copy">copy</string>
+    <string name="type_account_name">type account name</string>
+    <string name="type_private_key">type private key</string>
+    <string name="type_node_address">type node address</string>
+    <string name="type_contract_account">type contract account</string>
+    <string name="type_encrypt_privatekey">type encrypt privatekey</string>
+    <string name="type_password">type password</string>
+    <string name="type_password2">type password again</string>
+    <string name="password_not_same">two password are not same</string>
+    <string name="default_node_address">https://nicehero.io/eosrpc</string>
+    <string name="default_contract_account">eoschat</string>
+    <string name="submit">submit</string>
+</resources>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">微链</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">好友</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_chat">微链</string>
+    <string name="title_setting">设置</string>
+    <string name="set_notify">为了更好的聊天体验,请开启后台进程权限</string>
+    <string name="hint_enter_a_message">请输入文字</string>
+    <string name="copied_message">已复制</string>
+    <string name="action_delete">删除</string>
+    <string name="action_copy">复制</string>
+    <string name="type_account_name">请输入用户名</string>
+    <string name="type_private_key">请输入私钥</string>
+    <string name="type_node_address">请输入节点地址</string>
+    <string name="type_contract_account">请输入合约账号</string>
+    <string name="type_encrypt_privatekey">请输入加密私钥</string>
+    <string name="type_password">请输入密码</string>
+    <string name="type_password2">请再次输入密码</string>
+    <string name="password_not_same">两次输入密码不同</string>
+    <string name="default_node_address">https://nicehero.io/eosrpc</string>
+    <string name="default_contract_account">eoschat</string>
+    <string name="submit">提交</string>
+</resources>
