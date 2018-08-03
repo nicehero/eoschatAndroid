@@ -1,9 +1,13 @@
 package io.nicehero.eoschat;
 
 import android.app.Application;
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.util.Log;
 import android.view.View;
 import android.webkit.CookieSyncManager;
 import android.webkit.JsResult;
+import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -88,14 +92,29 @@ public class App extends Application {
 
     }
 
-    public static void setMyAccount(Account account) {
+    public static boolean setMyAccount(Account account) {
+        String s = "myecdh.set_private_key(\"" + account.encryptPrivateKey + "\")\n";
+        s = s + "codeAccount = \"" + account.contractAccount + "\";\n";
+        s = s + "myAccount = \"" + account.accountName + "\";\n";
+        s = s + "rpc = new eosjs2_jsonrpc.JsonRpc('" + account.nodeAddress + "');\n";
+        s = s + "signatureProvider = new eosjs2_jssig.default(['" + account.privateKey + "']);\n";
+        s = s + "api = new eosjs2.Api({ rpc, signatureProvider });\n";
+        s = s + "myecdh.get_public_key();\n";
+
+        chatJS.evaluateJavascript(s,new ValueCallback<String>() {
+            @Override
+            public void onReceiveValue(String value) {
+                Log.i("chatJS.evaluateJavascript return",value);
+            }
+        });
         myAccount = account;
+        return true;
     }
     public static Account getMyAccount() {
         return myAccount;
     }
 
-    public class Account
+    public static class Account
     {
         public String accountName;
         public String privateKey;
@@ -104,4 +123,11 @@ public class App extends Application {
         public String encryptPrivateKey;
         public String password;
     }
+
+    public static boolean isDebug(Context context){
+        boolean isDebug = context.getApplicationInfo()!=null&&
+                (context.getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE)!=0;
+        return isDebug;
+    }
+
 }

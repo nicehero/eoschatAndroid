@@ -21,4 +21,14 @@
     <string name="default_node_address">https://nicehero.io/eosrpc</string>
     <string name="default_contract_account">eoschat</string>
     <string name="submit">submit</string>
+    <string name="import_backup">import backup</string>
+    <string name="register_account">register</string>
+    <string name="random_encrypt_key">random</string>
+    <string name="title_bind_account">Bind Account</string>
+    <string name="no_account_name">no account name</string>
+    <string name="no_private_key">no private key</string>
+    <string name="no_node_address">no node address</string>
+    <string name="no_contract_account">no contract account</string>
+    <string name="no_encrypt_privatekey">no encrypt privatekey</string>
+    <string name="error_private_key_or_account">error_private_key_or_account</string>
 </resources>

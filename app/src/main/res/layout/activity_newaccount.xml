@@ -7,7 +7,7 @@
 
     <EditText
         android:id="@+id/typeAccountName"
-        android:layout_width="365dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -23,7 +23,7 @@
 
     <EditText
         android:id="@+id/typePrivateKey"
-        android:layout_width="363dp"
+        android:layout_width="394dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -37,7 +37,7 @@
 
     <EditText
         android:id="@+id/typeNodeAddress"
-        android:layout_width="363dp"
+        android:layout_width="394dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -52,7 +52,7 @@
 
     <EditText
         android:id="@+id/typeContractAccount"
-        android:layout_width="363dp"
+        android:layout_width="393dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -67,7 +67,7 @@
 
     <EditText
         android:id="@+id/typeEncryptPrivateKey"
-        android:layout_width="363dp"
+        android:layout_width="392dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -81,7 +81,7 @@
 
     <EditText
         android:id="@+id/typePassword"
-        android:layout_width="363dp"
+        android:layout_width="392dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -95,7 +95,7 @@
 
     <EditText
         android:id="@+id/typePassword2"
-        android:layout_width="363dp"
+        android:layout_width="394dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -113,9 +113,42 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="463dp"
-        android:layout_marginEnd="7dp"
+        android:layout_marginTop="541dp"
+        android:layout_marginEnd="6dp"
         android:text="@string/submit"
-        android:textSize="30sp" />
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/buttonRandom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="495dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/random_encrypt_key"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/buttonRegisterAccount"
+        android:layout_width="177dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="449dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/register_account"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/buttonImportBackup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="449dp"
+        android:layout_marginEnd="190dp"
+        android:text="@string/import_backup"
+        android:textSize="24sp" />
 
 </RelativeLayout>
